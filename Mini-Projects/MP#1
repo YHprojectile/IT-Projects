@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    int accountBalance = 500;
+    int withdrawAmount;
+    int choice;
+
+    printf("===Smart ATM===\n");
+    printf("1. Check Balance\n");
+    printf("2. Withdraw Balance\n");
+    printf("Enter Selection: ");
+    scanf("%d", &choice);
+
+    switch (choice) {
+        case 1:
+            printf("Your Current Balance is %d\n", accountBalance);
+            break;
+
+        case 2:
+            printf("Enter the amount to withdraw: RM ");
+            scanf("%d", &withdrawAmount);
+
+            if (withdrawAmount > accountBalance) {
+                printf("Insufficient Funds\n");
+            } else {
+                accountBalance -= withdrawAmount;
+                printf("Dispensing Cash...\nRemaining balance: %d\n", accountBalance);
+            }
+            break;
+
+        default:
+            printf("Invalid!\n");
+            break;
+    }
+
+    return 0;
+}
