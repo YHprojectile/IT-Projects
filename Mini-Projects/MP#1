@@ -5,7 +5,7 @@ int main() {
     int withdrawAmount;
     int choice;
 
-    printf("===Smart ATM===\n");
+    printf("=====Smart ATM=====\n");
     printf("1. Check Balance\n");
     printf("2. Withdraw Balance\n");
     printf("Enter Selection: ");
